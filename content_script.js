@@ -3,10 +3,13 @@ setInterval (function(){
 	var size = kol.length;
 	var tabId;
 	if (size >20) {
-	alert("Ki");
-		chrome.extension.sendMessage({type:getTabId},function(res){
-			tabId = res.tabId;
+		console.log("Fuck Facebook");
+		// 	chrome.extension.sendMessage({type:getTabId},function(res){
+		// 		tabId = res.tabId;
+		// 	});
+		// alert(tabId);
+		chrome.runtime.sendMessage({greeting: false}, function(response) {
+	  	console.log(response.farewell);
 		});
-	alert(tabId);
 	}
 },1000)
