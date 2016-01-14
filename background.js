@@ -1,12 +1,14 @@
 //start when activate tab
 chrome.tabs.onActivated.addListener(function(tab) {
+  console.log("foo1");
   //RegExp to detect facebook
   var reg = /\bfacebook/g;
   //chrome query fot detect fb tab
   chrome.tabs.query({'active':true,'lastFocusedWindow':true},function(tabs){
       var url = tabs[0].url;
       var res = url.match(reg);
-      if(res !=null){
+      if(res.length !=null){
+        console.log("foo2");
         //execute content_script.js
         chrome.tabs.executeScript(null, {file: "content_script.js"});
         //listener for message from content_script.js
