@@ -1,4 +1,4 @@
 # NoFacebook
-This is an extension for Chrome, which helps to control the time spent on Facebook
+This is an extension for Chrome, which helps to control the time spent on Facebook.
 
-At the moment, for the extension to work, you need to go to fb and click on the extension icon
+This Chrome extension limits the number of posts, which you can see on  Facebook Feed. Once you look at the 13 posts, facebook tab to automatically closes.
